@@ -1,0 +1,18 @@
+# Distribution
+build/
+dist/
+
+# elm-package generated files
+elm-stuff/
+
+# elm-repl generated files
+repl-temp-*
+
+# Dependency directories
+node_modules/
+
+#Backup Html
+indexbak.html
+/indexbak.html
+elm.js
+
