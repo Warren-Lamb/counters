@@ -79,5 +79,18 @@ update msg model =
 -- View
 
 view : Model -> Html Msg
-view model =
-    button [onClick NewCounter] [text "New counter"]
+view model = 
+   div [] [
+            button [onClick NewCounter] [text "New counter"]
+          , div [] (List.indexedMap viewCounter model) 
+          ]
+    
+viewCounter: Int -> Int -> Html Msg
+viewCounter index count =
+    div [] [
+             text (String.fromInt count)
+           , button [onClick (Increment index)] [text "+"]
+           , button [onClick (Decrement index)] [text "-"]
+           , button [onClick (DeleteCounter index)] [text "X"] 
+           ]
+
